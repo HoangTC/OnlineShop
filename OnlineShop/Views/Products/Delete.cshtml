@@ -30,7 +30,7 @@
         </dt>
 
         <dd>
-            <img style="max-height: 50px; max-width: 50px;" src="~/Content/Images/@Model.ImageData" alt="Image" />
+            <img style="max-height: 200px; max-width: 200px;" src="~/Content/Images/@Model.ImageData" alt="Image" />
         </dd>
 
     </dl>
@@ -39,8 +39,21 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" id="Delete" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#Delete").click(function () {
+                c = confirm("Xác nhận xóa!");
+                if (!c) {
+                    return false;
+                }
+            });
+        });
+    </script>    
+}

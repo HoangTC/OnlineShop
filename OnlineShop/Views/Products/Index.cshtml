@@ -25,7 +25,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr style="height: 200px; width: 200px;">
         <td>
             <a href="@Url.Action("Details", "Products", new { id=item.Id })">@Html.DisplayFor(modelItem => item.Name)</a>
 
@@ -34,7 +34,7 @@
             @Html.DisplayFor(modelItem => item.Category.Name)
         </td>
         <td>
-            <img style="max-height: 50px; max-width: 50px;" src="~/Content/Images/@item.ImageData" alt="Image" />
+            <img style="max-height: 200px; max-width: 200px;" src="~/Content/Images/@item.ImageData" alt="Image" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class = "btn btn-danger"}) |

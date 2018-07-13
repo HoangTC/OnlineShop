@@ -14,10 +14,10 @@
             }
         </ul>
     </div>
-    <div class="col-md-2">
-        <table class="table">
-            <tr>
-                <th>
+    <div class="col-md-10">
+        <table class="table" style="max-width: 500px;">
+            <tr >
+                <th >
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
@@ -32,14 +32,14 @@
             {
                 <tr>
                     <td>
-                        <a href="@Url.Action("Details", "Products", new { id=item.Id })">@Html.DisplayFor(modelItem => item.Name)</a>
+                        <a href="@Url.Action("Details", "Home", new { id=item.Id })">@Html.DisplayFor(modelItem => item.Name)</a>
 
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Category.Name)
                     </td>
                     <td>
-                        <img style="max-height: 50px; max-width: 50px;" src="~/Content/Images/@item.ImageData" alt="Image" />
+                        <img style="max-height: 200px; max-width: 200px;" src="~/Content/Images/@item.ImageData" alt="Image" />
                     </td>
                 </tr>
             }
