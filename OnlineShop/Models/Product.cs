@@ -18,7 +18,7 @@ namespace OnlineShop.Models
         public virtual Category Category { get; set; }
         public Product()
         {
-            ImageData = "~/Content/Images/default";
+            ImageData = "default.png";
         }
 
     }
